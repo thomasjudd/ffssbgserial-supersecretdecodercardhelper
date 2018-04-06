@@ -39,7 +39,4 @@ public class Decoder {
         }
         return strb.toString();
     }
-    public ArrayList<DCard> getDecoderCards() {
-        return mDecoderCards;
-    }
 }

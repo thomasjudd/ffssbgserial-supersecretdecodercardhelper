@@ -10,11 +10,13 @@ public class FFSSBGSerial {
 
         //TextAreas
         JTextArea input = new JTextArea();
+        input.setLineWrap(true);
         input.setBounds(25,175,350,50);
         f.add(input);
 
         JTextArea output = new JTextArea();
         output.setBounds(25,250,350,50);
+        output.setLineWrap(true);
         output.setEditable(false);
         f.add(output);
 
@@ -66,7 +68,7 @@ public class FFSSBGSerial {
             Decoder d = new Decoder(chosenCodewords);
             String outputText = new String();
             if(encode.isSelected()){
-                outputText = d.encode(input.getText());
+                outputText = d.encode(input.getText().toLowerCase());
             }
             if(decode.isSelected()) {
                 outputText = d.decode(input.getText());
